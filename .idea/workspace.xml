@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80bfdaee-52bf-43a9-adc9-f9182ac76f75" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eodi/EodiApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eodi/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eodi/entity/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eodi/repository/CityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eodi/service/CityService.java" afterDir="false" />
+    <list default="true" id="80bfdaee-52bf-43a9-adc9-f9182ac76f75" name="Changes" comment="MSA Service Start">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eodi/controller/CityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eodi/dto/CityDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eodi/entity/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eodi/entity/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eodi/repository/CityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eodi/repository/CityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eodi/service/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eodi/service/CityService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +23,30 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="EodiGalkkaService" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,7 +64,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/kkyung/Desktop/workspace/Project/EodiGalkkaService/src/main/java/org/eodi",
+    "last_opened_file_path": "/Users/kkyung/Desktop/workspace/Project/EodiGalkkaService/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,6 +74,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/org/eodi" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -102,6 +119,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EodiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="EodiGalkkaService.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.eodi.EodiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.com.eodi.EodiApplication" />
@@ -118,12 +142,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687015003431</updated>
-      <workItem from="1687015004700" duration="388000" />
+      <workItem from="1687015004700" duration="1636000" />
     </task>
+    <task id="LOCAL-00001" summary="MSA Service Start">
+      <created>1687015602721</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687015602721</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="MSA Service Start" />
+    <option name="LAST_COMMIT_MESSAGE" value="MSA Service Start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

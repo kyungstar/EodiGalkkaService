@@ -1,28 +1,10 @@
-package com.eodi.entity;
+package com.eodi.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+public class CityDto {
 
-@Entity
-@Table(name = "t_city")
-public class City {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "city_seq")
     private Long citySeq;
-
-    @Column(name = "country_seq")
     private Long countrySeq;
-
-    @Column(name = "city_name")
     private String cityName;
-
-    @Column(name = "order_num")
     private Integer orderNum;
 
     public Long getCitySeq() {
@@ -56,7 +38,4 @@ public class City {
     public void setOrderNum(Integer orderNum) {
         this.orderNum = orderNum;
     }
-
-    // 생성자, 게터(getter), 세터(setter) 생략
-
 }
