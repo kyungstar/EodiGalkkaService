@@ -1,14 +1,15 @@
 package com.eodi.repository;
 
+import com.eodi.entity.Country;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.eodi.entity.City;
 
 import java.util.List;
 
 
 @Repository
-public interface CityRepository extends JpaRepository<City, Long> {
-    List<City> findAllByOrderByOrderNum();
+public interface CountryRepository extends JpaRepository<Country, Long> {
+    List<Country> findAllByOrderByOrderNumAsc();
+
 }
 

@@ -1,5 +1,10 @@
 package com.eodi.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class CityDto {
 
     private Long citySeq;
@@ -7,35 +12,11 @@ public class CityDto {
     private String cityName;
     private Integer orderNum;
 
-    public Long getCitySeq() {
-        return citySeq;
-    }
-
-    public void setCitySeq(Long citySeq) {
+    public CityDto(Long citySeq, Long countrySeq, String cityName, Integer orderNum) {
         this.citySeq = citySeq;
-    }
-
-    public Long getCountrySeq() {
-        return countrySeq;
-    }
-
-    public void setCountrySeq(Long countrySeq) {
         this.countrySeq = countrySeq;
-    }
-
-    public String getCityName() {
-        return cityName;
-    }
-
-    public void setCityName(String cityName) {
         this.cityName = cityName;
-    }
-
-    public Integer getOrderNum() {
-        return orderNum;
-    }
-
-    public void setOrderNum(Integer orderNum) {
         this.orderNum = orderNum;
     }
+
 }

@@ -24,6 +24,4 @@ public class CityController {
         return cityService.getAllCitiesOrderedByOrderNum();
     }
 
-    // 추가적인 API 엔드포인트 및 메소드 선언이 필요한 경우 여기에 작성
-
 }
