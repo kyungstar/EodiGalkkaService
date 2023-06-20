@@ -65,4 +65,25 @@ public class Admin {
 
     @Column(name = "reg_date") // 해당 멤버 변수가 매핑되는 테이블의 컬럼 이름을 지정하는 어노테이션
     private String regDate; // 등록 일자
+
+    public void setStatus(Integer status) {
+    }
+
+    public enum UserType {
+        AGENCY("AGENCY"),
+        USER("USER");
+
+        private final String value;
+
+        UserType(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+    }
+
+
 }
+
