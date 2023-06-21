@@ -2,6 +2,7 @@ package com.eodi.controller;
 
 import com.eodi.dto.UserDto;
 import com.eodi.entity.Admin;
+import com.eodi.repository.AdminRepository;
 import com.eodi.service.AdminService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,17 +11,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/api")
 public class AdminController {
     private final AdminService adminService;
 
+    private final AdminRepository adminRepository;
+
     // AdminService 객체를 매개변수로 받는 AdminController 생성자
     // public 키워드: 이 생성자는 public으로 선언되었으므로, 외부에서 접근할 수 있습니다.
     // AdminController 클래스의 생성자이며, 클래스와 동일한 이름을 가지고 있습니다.
-    public AdminController(AdminService adminService) {
-        // 전달받은 adminService를 adminService 멤버 변수에 할당
+    public AdminController(AdminService adminService, AdminRepository adminRepository) {
         this.adminService = adminService;
+        this.adminRepository = adminRepository;
     }
 
 
@@ -30,18 +35,22 @@ public class AdminController {
         return adminService.getAllAgencyUsersOrderedByRegDate(userTypeData.getValue());
     }
 
+
     @PostMapping("/user/update")
     public ResponseEntity<String> updateUserStatus(@RequestParam("userId") String userId, @RequestParam("status") Integer status) {
         try {
-            adminService.updateUserStatus(userId, status);
+            Optional<Admin> adminOptional = adminRepository.findByUserId(userId);
+            if (adminOptional.isEmpty()) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("사용자를 찾을 수 없습니다.");
+            }
+            Admin admin = adminOptional.orElse(null);
+            adminService.setStatus(admin, status);
             return ResponseEntity.ok("사용자 상태가 성공적으로 업데이트되었습니다.");
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("사용자 상태 업데이트에 실패했습니다.");
         }
     }
-
-
 
     // todo 1. 회원가입 승인, 2. 관리자 회원가입, 3. 관리자 로그인
     /*

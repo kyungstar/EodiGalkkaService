@@ -12,7 +12,7 @@ import javax.transaction.Transactional;
 import java.util.*;
 
 @Service
-public class AdminService implements UserService  {
+public class AdminService {
     private final AdminRepository adminRepository;
 
     public AdminService(AdminRepository adminRepository) {
@@ -50,18 +50,16 @@ public class AdminService implements UserService  {
     }
 
 
-    @Override
-    @Transactional
-    public void updateUserStatus(String userId, Integer status) {
-        Optional<Admin> adminOptional = adminRepository.findByUserId(userId);
+    public void setStatus(Admin admin, Integer status) {
 
-        if (adminOptional.isPresent()) {
-            Admin admin = adminOptional.get();
+        try {
             admin.setStatus(status);
-            // 변경된 내용이 자동으로 DB에 반영됩니다.
-        } else {
-            throw new IllegalArgumentException("ID가 " + userId + "인 사용자를 찾을 수 없습니다.");
+            adminRepository.save(admin);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to update user status");
         }
     }
+
+
 
 }

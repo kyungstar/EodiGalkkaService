@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80bfdaee-52bf-43a9-adc9-f9182ac76f75" name="Changes" comment="회원가입 신청자 구현 완료.">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eodi/service/UserService.java" afterDir="false" />
+    <list default="true" id="80bfdaee-52bf-43a9-adc9-f9182ac76f75" name="Changes" comment="회원가입 신청자 승인 작업중..">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eodi/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eodi/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eodi/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eodi/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eodi/entity/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eodi/repository/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eodi/repository/AdminRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eodi/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eodi/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eodi/service/UserService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +152,7 @@
       <workItem from="1687101876273" duration="2556000" />
       <workItem from="1687182260777" duration="6098000" />
       <workItem from="1687189407897" duration="119000" />
-      <workItem from="1687270523143" duration="2374000" />
+      <workItem from="1687270523143" duration="5475000" />
     </task>
     <task id="LOCAL-00001" summary="MSA Service Start">
       <created>1687015602721</created>
@@ -200,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687187295499</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="회원가입 신청자 승인 작업중..">
+      <created>1687273277239</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687273277239</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +216,8 @@
     <MESSAGE value="MYSQL Setting" />
     <MESSAGE value="gradle update" />
     <MESSAGE value="회원가입 신청자 구현 완료." />
-    <option name="LAST_COMMIT_MESSAGE" value="회원가입 신청자 구현 완료." />
+    <MESSAGE value="회원가입 신청자 승인 작업중.." />
+    <option name="LAST_COMMIT_MESSAGE" value="회원가입 신청자 승인 작업중.." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

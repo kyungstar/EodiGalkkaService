@@ -1,6 +1,7 @@
 package com.eodi.entity;
 
 import lombok.Getter; // Lombok의 @Getter 어노테이션을 import
+import lombok.Setter;
 
 import javax.persistence.Column; // JPA의 컬럼 어노테이션을 import
 import javax.persistence.Entity; // JPA의 엔티티 어노테이션을 import
@@ -13,6 +14,7 @@ import java.util.Date; // java.util 패키지의 Date 클래스를 import
 
 // 해당 클래스의 필드에 대한 getter 메서드가 자동으로 생성됩니다
 @Getter // 이를 통해 필드 값을 외부에서 안전하게 접근할 수 있습니다. 예를 들어, private String name;이라는 필드가 있다면, getName() 메서드가 자동으로 생성되어 외부에서 이름 값을 얻을 수 있습니다.
+@Setter
 @Entity // JPA 엔티티 클래스임을 나타내는 어노테이션
 @Table(name = "t_node_user") // 해당 엔티티가 매핑되는 테이블의 이름을 지정하는 어노테이션
 public class Admin {
@@ -66,8 +68,7 @@ public class Admin {
     @Column(name = "reg_date") // 해당 멤버 변수가 매핑되는 테이블의 컬럼 이름을 지정하는 어노테이션
     private String regDate; // 등록 일자
 
-    public void setStatus(Integer status) {
-    }
+
 
     public enum UserType {
         AGENCY("AGENCY"),
