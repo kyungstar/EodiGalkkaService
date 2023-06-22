@@ -29,6 +29,7 @@ public class AdminController {
     }
 
 
+    // todo 유저목록에서, 고객목록 암호화 부분 처리 확인하기.
     @PostMapping("/user/list")
     public String findAllByOrderByRegDate(@RequestParam String userType) {
         Admin.UserType userTypeData = Admin.UserType.valueOf(userType);
@@ -40,15 +41,17 @@ public class AdminController {
     public ResponseEntity<String> updateUserStatus(@RequestParam("userId") String userId, @RequestParam("status") Integer status) {
         try {
             Optional<Admin> adminOptional = adminRepository.findByUserId(userId);
+
             if (adminOptional.isEmpty()) {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("사용자를 찾을 수 없습니다.");
             }
+
             Admin admin = adminOptional.orElse(null);
             adminService.setStatus(admin, status);
+
             return ResponseEntity.ok("사용자 상태가 성공적으로 업데이트되었습니다.");
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("사용자 상태 업데이트에 실패했습니다.");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("사용자 상태 업데이트에 실패했습니다.");
         }
     }
 
@@ -56,7 +59,6 @@ public class AdminController {
     /*
     *1. 관리자에서 나라, 도시, 여행글을 제재 및 공지사항을 등록한다. 순서변경도 가능하다. (블랙리스트도 가능하다.)
     2. 관리자가 여행 글을 등록하며, 순서를 정렬한다.
-    3. 전체적인 회원을 관리한다.
-    4. 전체적인 여행,모집 글을 관리한다.
+    3. 전체적인 여행,모집 글을 관리한다.
     * */
 }
